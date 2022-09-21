@@ -22,6 +22,7 @@ export function AboutContent({ name, developer }: About) {
          spacing={{ base: 8, md: 10 }}
          align={"center"}
          direction={"column"}
+         h={"60vh"}
       >
          <Box textAlign={"center"}>
             <Link onClick={getLink}>

@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { Navigation } from "../components/Navigation";
+import { Footer } from "../components/Footer";
 
 import theme from "./../themes/themes";
 
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
          <Navigation />
 
          <Component {...pageProps} />
+         <Footer />
       </ChakraProvider>
    );
 }
