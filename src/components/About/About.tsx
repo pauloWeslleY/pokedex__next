@@ -7,7 +7,7 @@ interface About {
 }
 
 export function AboutContent({ name, developer }: About) {
-   const bg__about = useColorModeValue("gray.50", "gray.800");
+   const bg__about = useColorModeValue("white", "gray.800");
    const color__text = useColorModeValue("gray.400", "gray.400");
 
    const link = "https://weslleylima.vercel.app/";
