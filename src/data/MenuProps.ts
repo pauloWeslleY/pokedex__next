@@ -7,22 +7,22 @@ export interface Menu {
 const MenuProps: Menu[] = [
    {
       id: 1,
-      name: "Pokemon List",
+      name: "Poke List",
       path: "/pokelist"
    },
    {
       id: 2,
-      name: "Pokemon Details",
+      name: "Poke Details",
       path: "/pokedetails"
    },
    {
       id: 3,
-      name: "Pokemon Card",
+      name: "Poke Card",
       path: "/"
    },
    {
       id: 4,
-      name: "Pokemon Region",
+      name: "Poke Region",
       path: "/pokeregion"
    },
    {
