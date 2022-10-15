@@ -18,6 +18,7 @@ export function TabNavItems({ menu }: TabNavProps) {
                _focus={{
                   boxShadow: "lg",
                }}
+               fontWeight={"bold"}
             >
                {name}
             </Tab>
