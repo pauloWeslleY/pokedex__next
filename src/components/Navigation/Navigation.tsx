@@ -16,11 +16,11 @@ import { BtnToggleMode } from "../BtnToggleMode";
 export function Navigation() {
    const bg = useColorModeValue("gray.900", "gray.10");
    const nav__title = useColorModeValue("gray.300", "gray.900");
-   const [tabIndex, setTabIndex] = useState<any>(0);
+   // const [tabIndex, setTabIndex] = useState<any>(0);
 
-   const handleTabsChange = (index: any) => {
-      setTabIndex(index);
-   };
+   // const handleTabsChange = (index: any) => {
+   //    setTabIndex(index);
+   // };
 
    return (
       <Box shadow={"dark-lg"}>
@@ -62,8 +62,8 @@ export function Navigation() {
             overflowX={"auto"}
          >
             <Tabs
-               index={tabIndex}
-               onChange={handleTabsChange}
+               // index={tabIndex}
+               // onChange={handleTabsChange}
                defaultIndex={2}
                borderBottomColor={"transparent"}
                colorScheme={"red"}

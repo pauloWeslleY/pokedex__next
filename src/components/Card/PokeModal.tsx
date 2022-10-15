@@ -1,6 +1,5 @@
-import { memo, ReactElement } from "react";
+import { memo } from "react";
 import {
-   Box,
    Flex,
    Heading,
    Image,
@@ -8,30 +7,12 @@ import {
    ModalBody,
    ModalCloseButton,
    ModalContent,
-   ModalHeader,
    ModalOverlay,
    Stack,
    Tag,
    Text,
 } from "@chakra-ui/react";
 import { CardsType } from "./index";
-
-export function TitleModal({
-   name,
-   types,
-   height,
-   weight,
-   abilities,
-}: CardsType) {
-   return (
-      <Heading fontWeight={700} as={"h4"} fontSize={"1.5rem"}>
-         Ability:{" "}
-         <Text fontWeight={"medium"} as={"span"}>
-            {}
-         </Text>
-      </Heading>
-   );
-}
 
 export function PokeModal({
    name,
@@ -72,7 +53,7 @@ export function PokeModal({
 
    return (
       <section>
-         <Modal isOpen={isOpen} onClose={onClose}>
+         <Modal size={"xs"} isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent>
                <ModalCloseButton />
@@ -80,7 +61,7 @@ export function PokeModal({
                   <Stack spacing={4} align={"center"}>
                      <Image
                         boxSize={"17.5rem"}
-                        border={"0.2rem solid #d90429"}
+                        border={"0.1rem solid #d90429"}
                         p={2}
                         borderRadius={"50%"}
                         fit={"cover"}
@@ -95,13 +76,14 @@ export function PokeModal({
                      >
                         <Heading
                            as={"h3"}
+                           my={"1rem"}
                            fontWeight={800}
-                           fontSize={"2.5rem"}
+                           fontSize={"2rem"}
                            textTransform={"uppercase"}
                         >
                            {name}
                         </Heading>
-                        <Heading fontWeight={700} as={"h4"} fontSize={"1.5rem"}>
+                        <Heading fontWeight={700} as={"h4"} fontSize={"1.4rem"}>
                            Number:{" "}
                            <Text as={"span"}>
                               <Tag variant={"solid"} size={"lg"} bg={"red.10"}>

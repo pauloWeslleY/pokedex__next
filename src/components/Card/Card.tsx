@@ -9,7 +9,7 @@ type PokeInfo = {
 };
 
 export function Card() {
-   const { data: pokelist } = useApi<PokeInfo[]>(
+   const { data: POKELIST } = useApi<PokeInfo[]>(
       "https://pokeapi.co/api/v2/pokemon?limit=251"
    );
 
@@ -25,22 +25,22 @@ export function Card() {
                gap={"2rem"}
                flexWrap={"wrap"}
             >
-               {pokelist?.length === 0 ? (
+               {POKELIST?.length === 0 ? (
                   <Loading />
                ) : (
-                  pokelist?.map((item) => (
+                  POKELIST?.map((item) => (
                      <Box
                         key={item.name}
                         as={"span"}
-                        fontWeight={"medium"}
+                        fontWeight={"regular"}
                         fontSize={"2rem"}
                         px={{ base: 4, md: 8 }}
                         py={"5"}
-                        shadow={"xl"}
                         border={"1px solid"}
                         borderColor={borderColor}
+                        shadow={"xl"}
                         rounded={"lg"}
-                        flexBasis={"100px"}
+                        flexBasis={"15rem"}
                         flexGrow={1}
                         flexShrink={1}
                         textAlign={"center"}

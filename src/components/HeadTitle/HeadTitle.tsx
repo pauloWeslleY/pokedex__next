@@ -11,14 +11,19 @@ export function HeadTitle({ title, subtitle }: HeadTitleProps) {
       <Center>
          <Heading
             as={"h2"}
-            fontWeight={"extrabold"}
+            fontWeight={800}
             fontSize={"2.5rem"}
             py={"4rem"}
             alignItems={"center"}
          >
             {title}{" "}
-            <Text as={"span"} fontWeight={"medium"} fontSize={"2.8rem"}>
-               <Tag colorScheme={"red"} size={"xl"} p={"0.2rem"}>
+            <Text as={"span"} fontSize={"2.8rem"}>
+               <Tag
+                  colorScheme={"red"}
+                  fontWeight={200}
+                  size={"xl"}
+                  p={"0.2rem"}
+               >
                   {subtitle}
                </Tag>
             </Text>
