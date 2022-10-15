@@ -10,7 +10,7 @@ export function useFetch() {
 
    function getPokemon() {
       let endpoints = [];
-      for (let i = 1; i < 252; i++) {
+      for (let i = 1; i < 486; i++) {
          endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}`);
       }
       axios

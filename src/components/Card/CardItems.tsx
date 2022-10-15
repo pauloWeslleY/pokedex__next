@@ -1,8 +1,6 @@
 import { Flex, Box, Tag, chakra } from "@chakra-ui/react";
 import { CardsType } from "./../../types/CardsType";
 
-import styles from "./cards.module.scss";
-
 export function CardItems({ name, image, id, types }: CardsType) {
    function typeHandler() {
       if (types[1]) {
@@ -12,83 +10,85 @@ export function CardItems({ name, image, id, types }: CardsType) {
    }
 
    return (
-      <section className={styles.card__items}>
-         <Flex
-            direction={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
+      <Flex
+         basis={"15rem"}
+         grow={1}
+         shrink={1}
+         m={1}
+         direction={"column"}
+         justifyContent={"center"}
+         alignItems={"center"}
+      >
+         <Box
+            bg={"blackAlpha.100"}
+            borderColor={"red.600"}
+            borderWidth={"1px"}
+            h={80}
+            w={"full"}
+            rounded={"lg"}
+            shadow={"lg"}
+            bgSize={"cover"}
+            bgPos={"center"}
+            style={{
+               backgroundImage: `url(${image})`,
+            }}
+         ></Box>
+         <Box
+            w={{
+               base: 56,
+               md: 64,
+            }}
+            mt={-10}
+            shadow={"lg"}
+            rounded={"lg"}
+            overflow={"hidden"}
          >
-            <Box
-               bg={"blackAlpha.100"}
-               borderColor={"red.600"}
-               borderWidth={"1px"}
-               h={80}
-               w={"full"}
-               rounded={"lg"}
-               shadow={"lg"}
-               bgSize={"cover"}
-               bgPos={"center"}
-               style={{
-                  backgroundImage: `url(${image})`,
+            <chakra.h3
+               py={2}
+               textAlign={"center"}
+               fontWeight={"bold"}
+               textTransform={"uppercase"}
+               bg={"gray.40"}
+               color={"gray.200"}
+               _dark={{
+                  color: "white",
                }}
-            ></Box>
-            <Box
-               w={{
-                  base: 56,
-                  md: 64,
-               }}
-               mt={-10}
-               shadow={"lg"}
-               rounded={"lg"}
-               overflow={"hidden"}
+               letterSpacing={1}
             >
-               <chakra.h3
-                  py={2}
-                  textAlign={"center"}
+               {name}
+            </chakra.h3>
+            <Flex
+               alignItems={"center"}
+               justifyContent={"space-between"}
+               py={2}
+               px={3}
+               bg={"gray.20"}
+               _dark={{
+                  bg: "gray.500",
+               }}
+            >
+               <chakra.span
                   fontWeight={"bold"}
-                  textTransform={"uppercase"}
-                  bg={"gray.40"}
-                  color={"gray.200"}
+                  color={"gray.800"}
                   _dark={{
-                     color: "white",
-                  }}
-                  letterSpacing={1}
-               >
-                  {name}
-               </chakra.h3>
-               <Flex
-                  alignItems={"center"}
-                  justifyContent={"space-between"}
-                  py={2}
-                  px={3}
-                  bg={"gray.20"}
-                  _dark={{
-                     bg: "gray.500",
+                     color: "gray.200",
                   }}
                >
-                  <chakra.span
-                     fontWeight={"bold"}
-                     color={"gray.800"}
-                     _dark={{
-                        color: "gray.200",
-                     }}
-                  >
-                     <Tag variant={"solid"} bg={"red.20"}>
-                        #{id}
-                     </Tag>
-                  </chakra.span>
-                  <chakra.span
-                     fontWeight={"medium"}
-                     color={"gray.800"}
-                     _dark={{
-                        color: "gray.200",
-                     }}
-                  >
-                     {typeHandler()}
-                  </chakra.span>
-               </Flex>
-            </Box>
-         </Flex>
-      </section>
+                  <Tag variant={"solid"} bg={"red.20"}>
+                     #{id}
+                  </Tag>
+               </chakra.span>
+               <chakra.span
+                  fontWeight={"medium"}
+                  color={"gray.800"}
+                  _dark={{
+                     color: "gray.200",
+                  }}
+               >
+                  {typeHandler()}
+               </chakra.span>
+            </Flex>
+         </Box>
+      </Flex>
    );
 }

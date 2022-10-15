@@ -8,23 +8,27 @@ const config: ThemeConfig = {
    useSystemColorMode: true
 }
 
+const colors = {
+   red: {
+      10: '#EF233C',
+      20: '#D90429'
+   },
+   gray: {
+      10: '#EDF2F4',
+      20: '#8D99AE',
+      40: '#2B2D42',
+   }
+}
+
+
 const theme = extendTheme({
    customTheme,
    config,
    fonts: {
+      Heading: `'Poppins', sans-serif`,
       body: `'Poppins', sans-serif`,
    },
-   colors: {
-      red: {
-         10: '#EF233C',
-         20: '#D90429'
-      },
-      gray: {
-         10: '#EDF2F4',
-         20: '#8D99AE',
-         40: '#2B2D42',
-      }
-   }
+   colors
 });
 
 export default theme;

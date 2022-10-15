@@ -1,11 +1,6 @@
 import { memo } from "react";
-import { Flex, HStack } from "@chakra-ui/react";
-import { HeadTitle } from "../HeadTitle";
-import { Loading } from "../Loading";
-import { CardItems } from "./CardItems";
-import { useFetch } from "./../../hooks/useFetch";
-
-import styles from "./cards.module.scss";
+import { Flex, Container } from "@chakra-ui/react";
+import { HeadTitle, Loading, CardItems, useFetch } from "./index";
 
 export function PokemonCard() {
    const { pokemons } = useFetch();
@@ -14,8 +9,8 @@ export function PokemonCard() {
       <section>
          <HeadTitle title="Pokémon" subtitle="Card" />
 
-         <HStack>
-            <Flex className={styles.cards__container}>
+         <Container maxW={"1xl"}>
+            <Flex flexWrap={"wrap"}>
                {pokemons.length === 0 ? (
                   <Loading />
                ) : (
@@ -30,7 +25,7 @@ export function PokemonCard() {
                   ))
                )}
             </Flex>
-         </HStack>
+         </Container>
       </section>
    );
 }

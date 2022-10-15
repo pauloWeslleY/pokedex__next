@@ -4,7 +4,7 @@ export interface Menu {
    path: string;
 }
 
-const MenuProps: Menu[] = [
+const MenuProps: Array<Menu> = [
    {
       id: 1,
       name: "Poke List",

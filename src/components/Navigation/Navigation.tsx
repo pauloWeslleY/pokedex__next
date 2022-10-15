@@ -68,7 +68,7 @@ export function Navigation() {
                borderBottomColor={"transparent"}
                colorScheme={"red"}
             >
-               <TabList>
+               <TabList overflow={"auto"} p={2}>
                   {MenuProps.map((item) => {
                      return <TabNavItems key={item.id} menu={item} />;
                   })}

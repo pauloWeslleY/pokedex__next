@@ -6,4 +6,6 @@ export interface CardsType {
    weight?: number;
    height?: number;
    abilities?: any;
+   isOpen?: any;
+   onClose?: any;
 }

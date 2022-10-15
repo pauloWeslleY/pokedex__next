@@ -1,19 +1,14 @@
 import { memo } from "react";
-import { Flex, HStack } from "@chakra-ui/react";
-import { Loading } from "../Loading";
-import { PokeCardItem } from "./PokeCardItems";
-
-import { useFetch } from "./../../hooks/useFetch";
-
-import styles from "./cards.module.scss";
+import { Flex, Container } from "@chakra-ui/react";
+import { PokeCardItem, Loading, useFetch } from "./index";
 
 export function PokeDetailsCard() {
    const { pokemons } = useFetch();
 
    return (
       <section>
-         <HStack>
-            <Flex className={styles.cards__container}>
+         <Container maxW={"1xl"}>
+            <Flex flexWrap={"wrap"}>
                {pokemons.length === 0 ? (
                   <Loading />
                ) : (
@@ -31,7 +26,7 @@ export function PokeDetailsCard() {
                   ))
                )}
             </Flex>
-         </HStack>
+         </Container>
       </section>
    );
 }
