@@ -9,7 +9,7 @@ export function PokemonCard() {
       <section>
          <HeadTitle title="Pokémon" subtitle="Card" />
 
-         <Container maxW={"1xl"}>
+         <Container maxW={"8xl"}>
             <Flex flexWrap={"wrap"}>
                {pokemons.length === 0 ? (
                   <Loading />
@@ -18,7 +18,9 @@ export function PokemonCard() {
                      <CardItems
                         key={pokemon.data.name}
                         name={pokemon.data.name}
-                        image={pokemon.data.sprites.front_default}
+                        image={
+                           pokemon.data.sprites.other.dream_world.front_default
+                        }
                         id={pokemon.data.id}
                         types={pokemon.data.types}
                      />

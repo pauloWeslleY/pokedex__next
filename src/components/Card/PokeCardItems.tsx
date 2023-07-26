@@ -2,20 +2,13 @@ import { memo } from "react";
 import { Box, Flex, Image, Button, useDisclosure } from "@chakra-ui/react";
 import { CardsType, PokeModal } from "./index";
 
-export function PokeCardItem({
-   name,
-   image,
-   id,
-   types,
-   height,
-   weight,
-   abilities,
-}: CardsType) {
+export function PokeCardItem(props: CardsType) {
+   const { name, image, id, types, height, weight, abilities } = props;
    const { isOpen, onOpen, onClose } = useDisclosure();
 
    return (
       <Flex
-         basis={"18rem"}
+         basis={"13rem"}
          grow={1}
          shrink={1}
          direction={"column"}
@@ -30,13 +23,7 @@ export function PokeCardItem({
          overflow={"hidden"}
          border={"1px solid gray"}
       >
-         <Image
-            w={"full"}
-            h={"20rem"}
-            fit={"cover"}
-            src={image}
-            alt={"avatar"}
-         />
+         <Image boxSize={"14rem"} fit={"cover"} src={image} alt={"avatar"} />
 
          <Box py={5} textAlign={"center"}>
             <Button

@@ -11,7 +11,7 @@ export function CardItems({ name, image, id, types }: CardsType) {
 
    return (
       <Flex
-         basis={"15rem"}
+         basis={"12rem"}
          grow={1}
          shrink={1}
          m={1}
@@ -23,8 +23,7 @@ export function CardItems({ name, image, id, types }: CardsType) {
             bg={"blackAlpha.100"}
             borderColor={"red.600"}
             borderWidth={"1px"}
-            h={80}
-            w={"full"}
+            boxSize={"16rem"}
             rounded={"lg"}
             shadow={"lg"}
             bgSize={"cover"}
@@ -32,7 +31,7 @@ export function CardItems({ name, image, id, types }: CardsType) {
             style={{
                backgroundImage: `url(${image})`,
             }}
-         ></Box>
+         />
          <Box
             w={{
                base: 56,

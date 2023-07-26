@@ -4,10 +4,6 @@ import axios from "axios";
 export function useFetch() {
    const [pokemons, setPokemons] = useState<any>([]);
 
-   useEffect(() => {
-      getPokemon();
-   }, []);
-
    function getPokemon() {
       let endpoints = [];
       for (let i = 1; i < 486; i++) {
@@ -18,5 +14,9 @@ export function useFetch() {
          .then((res) => setPokemons(res));
    }
 
-   return {pokemons}
+   useEffect(() => {
+      getPokemon();
+   }, []);
+
+   return { pokemons };
 }

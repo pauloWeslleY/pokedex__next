@@ -23,7 +23,7 @@ export function Navigation() {
    // };
 
    return (
-      <Box shadow={"dark-lg"}>
+      <Box shadow={"md"}>
          <chakra.header
             bg={bg}
             borderColor={"red.500"}
